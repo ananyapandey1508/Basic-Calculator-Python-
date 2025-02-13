@@ -1,0 +1,16 @@
+def calculator():
+    try:
+        expression = input("Enter expression (e.g., 3 + 5): ")
+        result = eval(expression)
+        print("Result:", result)
+    except ZeroDivisionError:
+        print("Error: Division by zero is not allowed.")
+    except Exception as e:
+        print("Error:", e)
+
+if __name__ == "__main__":
+    while True:
+        calculator()
+        cont = input("Do you want to continue? (y/n): ")
+        if cont.lower() != 'y':
+            break
